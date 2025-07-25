@@ -1,0 +1,9 @@
+@echo off
+echo cleaning old output...
+rmdir /s /q "../docs"
+echo running doxygen...
+@CALL doxygen Doxyfile > NUL
+@cd "../docs"
+echo opening html...
+@START "" "index.html"
+PAUSE

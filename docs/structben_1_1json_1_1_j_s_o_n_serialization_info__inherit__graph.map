@@ -1,0 +1,17 @@
+<map id="ben::json::JSONSerializationInfo&lt; T &gt;" name="ben::json::JSONSerializationInfo&lt; T &gt;">
+<area shape="rect" id="Node000001" title="templated struct which contains information associated with the JSON serialization of a type" alt="" coords="5,211,195,254"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="439,11,628,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,196,155,133,184,101,217,75,271,51,328,36,385,28,438,25,438,30,386,33,329,41,273,56,220,80,187,105,160,136,120,198"/>
+<area shape="rect" id="Node000003" href="$structben_1_1json_1_1_j_s_o_n_serialization_info_3_01_j_s_o_n_value_01_4.html" title="specialization for JSONValue typed JSONSerializationInfo" alt="" coords="439,78,628,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,199,173,170,218,146,273,127,330,114,438,100,438,105,331,119,274,132,220,151,176,175,137,203"/>
+<area shape="rect" id="Node000004" href="$structben_1_1json_1_1_j_s_o_n_serialization_info_3_01_j_s_o_n_value_1_1_array_type_01_4.html" title="specialization for JSONValue::ArrayType typed JSONSerializationInfo" alt="" coords="432,144,634,187"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,204,218,200,328,183,431,172,432,177,329,189,219,205,199,209"/>
+<area shape="rect" id="Node000005" href="$structben_1_1json_1_1_j_s_o_n_serialization_info_3_01_j_s_o_n_value_1_1_literal_type_01_4.html" title="specialization for JSONValue::LiteralType typed JSONSerializationInfo" alt="" coords="430,211,636,254"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="210,230,430,230,430,235,210,235"/>
+<area shape="rect" id="Node000006" href="$structben_1_1json_1_1_j_s_o_n_serialization_info_3_01_j_s_o_n_value_1_1_number_type_01_4.html" title="specialization for JSONValue::NumberType typed JSONSerializationInfo" alt="" coords="425,278,642,320"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="199,255,219,259,324,275,424,287,424,292,324,280,218,264,198,260"/>
+<area shape="rect" id="Node000007" href="$structben_1_1json_1_1_j_s_o_n_serialization_info_3_01_j_s_o_n_value_1_1_object_type_01_4.html" title="specialization for JSONValue::ObjectType typed JSONSerializationInfo" alt="" coords="429,344,638,387"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="137,261,176,290,220,314,271,331,325,344,429,359,428,364,324,350,270,337,218,319,173,294,134,266"/>
+<area shape="rect" id="Node000008" href="$structben_1_1json_1_1_j_s_o_n_serialization_info_3_01_j_s_o_n_value_1_1_string_type_01_4.html" title="specialization for JSONValue::StringType typed JSONSerializationInfo" alt="" coords="431,411,636,454"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="120,266,160,329,187,360,220,385,270,408,325,423,379,431,430,434,430,439,379,436,324,428,269,413,217,389,184,363,155,332,115,269"/>
+</map>

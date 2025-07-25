@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# checks to make sure tests pass (if a tests executable is found
+# in the build outputs -- if not, skip this part)
+
+if [ -e "./build/bin/Windows/Release/tests.exe" ]; then
+	echo "Found tests. Running..."
+	# the test application potentially generates a text file as a "log"...
+	# ...run it from the build directory so the text file is ignored by git!
+	cd ./build/bin/Windows/Release
+	"./tests.exe"
+	if [ $? -ne 0 ]; then
+		echo "Tests failed. Aborting push."
+		exit 1
+	fi
+	echo "Tests passed."
+	cd ../../../..
+fi
+
+# checks for the existence of an index.html file in the
+# /docs/ folder at the root of the project. Returns non zero
+# if the file does not exist, cancelling the push.
+
+# a more advanced "documentation checking" method can be employed
+# in the future, but assuming no monkey-business this should work
+# well enough
+
+if [ ! -e "./docs" ] || [ ! -e "./docs/index.html" ]; then
+	echo "Documentation not found. Aborting push."
+	exit 1
+fi
+
+echo "Documentation exists. Good to push!"
+
+exit 0

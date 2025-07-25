@@ -1,0 +1,5 @@
+<map id="ben::json::JSONValue::JSONValue" name="ben::json::JSONValue::JSONValue">
+<area shape="rect" id="Node000001" title="number type ctor" alt="" coords="5,5,156,48"/>
+<area shape="rect" id="Node000002" href="$structben_1_1json_1_1_j_s_o_n_value.html#a4d4531b1c20688fa1f24668bcdaa5279" title="leaves the JSONValue in such a state that .type == JSONValueType::undefined (i.e. it will be skipped ..." alt="" coords="204,5,354,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,24,188,24,188,29,156,29"/>
+</map>

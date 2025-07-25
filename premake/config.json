@@ -1,0 +1,15 @@
+{
+	"additionalConfigurations" : "",
+	"additionalPlatforms" : "",
+	"additionalProjectDirs" : "",
+	"buildExamples" : "false",
+	"buildTests" : "true",
+	"debugDefinitions" : "",
+	"libraries" : "",
+	"libraryBinaryDirs" : "",
+	"libraryIncludeDirs" : "",
+	"postbuildCommands" : "",
+	"prebuildCommands" : "",
+	"projectType" : "StaticLib",
+	"releaseDefinitions" : ""
+}

@@ -1,0 +1,5 @@
+<map id="ben::json::JSONSerializationInfo&lt; JSONValue::LiteralType &gt;" name="ben::json::JSONSerializationInfo&lt; JSONValue::LiteralType &gt;">
+<area shape="rect" id="Node000001" title="specialization for JSONValue::LiteralType typed JSONSerializationInfo" alt="" coords="5,120,212,163"/>
+<area shape="rect" id="Node000002" href="$structben_1_1json_1_1_j_s_o_n_serialization_info.html" title="templated struct which contains information associated with the JSON serialization of a type" alt="" coords="14,5,203,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,64,111,120,106,120,106,64"/>
+</map>

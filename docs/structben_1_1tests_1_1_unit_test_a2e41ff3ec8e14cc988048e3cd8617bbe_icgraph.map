@@ -1,0 +1,6 @@
+<map id="ben::tests::UnitTest::UnitTest" name="ben::tests::UnitTest::UnitTest">
+<area shape="rect" id="Node000001" title="accepts a name for the unit test (a c str) and a pointer to the function which implements the test" alt="" coords="190,29,326,72"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="287,16,276,10,258,8,241,10,230,15,226,21,228,28,222,29,221,19,227,10,239,5,258,3,278,5,290,11"/>
+<area shape="rect" id="Node000002" href="$structben_1_1tests_1_1_unit_test.html#a09afc8f88dedd41793c79ce5cb5b6cbd" title="dtor is virtual since unit tests are to be inherited from" alt="" coords="5,29,142,72"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="174,53,142,53,142,48,174,48"/>
+</map>
