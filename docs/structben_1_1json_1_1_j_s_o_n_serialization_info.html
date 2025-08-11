@@ -30,9 +30,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bJSON<span id="projectnumber">&#160;0.1.0</span>
+   <div id="projectname">bJSON<span id="projectnumber">&#160;0.1.1</span>
    </div>
-   <div id="projectbrief">A &quot;single-file header&quot; JSON utility collection for C++.</div>
+   <div id="projectbrief">A small JSON serialization library for C++.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -130,7 +130,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5bbfe027214f31586ead52398e0ba35" id="r_ac5bbfe027214f31586ead52398e0ba35"><td class="memItemLeft" align="right" valign="top">static constexpr std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5bbfe027214f31586ead52398e0ba35">serializer_impl</a> (const T &amp;val)</td></tr>
+<tr class="memitem:a39dd37ab72979d736f0332076aa8c154" id="r_a39dd37ab72979d736f0332076aa8c154"><td class="memItemLeft" align="right" valign="top">static constexpr std::u8string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39dd37ab72979d736f0332076aa8c154">serializer_impl</a> (const T &amp;val)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -141,12 +141,10 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 struct ben::json::JSONSerializationInfo&lt; T &gt;</div><p>templated struct which contains information associated with the JSON serialization of a type </p>
 <p>for all types T, the struct contains the following information:</p><ul>
-<li><a class="el" href="#adf1b2cbddd05cbaabfa9615569b8abb4" title="an alias for a pointer to a function matching the type of the serialization implementation for this t...">JSONSerializationInfo&lt;T&gt;::SerializationFnType</a>; an alias for a pointer to a function accepting a const T&amp; as the single argument which returns a (possibly constexpr) const std::string</li>
+<li><a class="el" href="#adf1b2cbddd05cbaabfa9615569b8abb4" title="an alias for a pointer to a function matching the type of the serialization implementation for this t...">JSONSerializationInfo&lt;T&gt;::SerializationFnType</a>; an alias for a pointer to a function accepting a const T&amp; as the single argument which returns a const std::u8string</li>
 <li><a class="el" href="#a5efdd38054ad877254255c99beb9534d" title="a constexpr boolean which is true if type T is JSON serializable and false otherwise">JSONSerializationInfo&lt;T&gt;::serializable</a>; a static constexpr bool which is true if type T is JSON serializable and false otherwise</li>
 <li><a class="el" href="#a1056aa33edc9fba7761fcb51ba394787" title="a constexpr function pointer to the SerializationFnType for type T which points to the serialization ...">JSONSerializationInfo&lt;T&gt;::serializer</a>; a static constexpr function pointer of type <a class="el" href="#adf1b2cbddd05cbaabfa9615569b8abb4" title="an alias for a pointer to a function matching the type of the serialization implementation for this t...">JSONSerializationInfo&lt;T&gt;::SerializationFnType</a> (depends on T) which points to the serialization implementation for type T if it exists or nullptr if it does not exist</li>
-</ul>
-<p>for types T <em>which have been made serializable via the helper macro</em>, the struct ALSO contains the following:</p><ul>
-<li><a class="el" href="#ac5bbfe027214f31586ead52398e0ba35" title="the default serializer_impl for a generic type returns an empty string; implementations must be provi...">JSONSerializationInfo&lt;T&gt;::serializer_impl(const T&amp;)</a>; a static (possibly constexpr) member function declaration for the implementation of the serialization of type T. Also a feature of the helper macro, the <a class="el" href="#a1056aa33edc9fba7761fcb51ba394787" title="a constexpr function pointer to the SerializationFnType for type T which points to the serialization ...">JSONSerializationInfo&lt;T&gt;::serializer</a> function pointer is set to the implementation method instead of nullptr</li>
+<li><a class="el" href="#a39dd37ab72979d736f0332076aa8c154" title="the default serializer_impl for a generic type returns an empty string; implementations must be provi...">JSONSerializationInfo&lt;T&gt;::serializer_impl(const T&amp;)</a>; a static member function declaration for the implementation of the serialization of type T. If specialized via the helper macro, the <a class="el" href="#a1056aa33edc9fba7761fcb51ba394787" title="a constexpr function pointer to the SerializationFnType for type T which points to the serialization ...">JSONSerializationInfo&lt;T&gt;::serializer</a> function pointer is set to the implementation method instead of nullptr</li>
 </ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -155,7 +153,7 @@ struct ben::json::JSONSerializationInfo&lt; T &gt;</div><p>templated struct whic
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00341">341</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00320">320</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="adf1b2cbddd05cbaabfa9615569b8abb4" name="adf1b2cbddd05cbaabfa9615569b8abb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf1b2cbddd05cbaabfa9615569b8abb4">&#9670;&#160;</a></span>SerializationFnType</h2>
@@ -173,13 +171,13 @@ template&lt;typename T&gt; </div>
 
 <p>an alias for a pointer to a function matching the type of the serialization implementation for this type </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00345">345</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00324">324</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ac5bbfe027214f31586ead52398e0ba35" name="ac5bbfe027214f31586ead52398e0ba35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5bbfe027214f31586ead52398e0ba35">&#9670;&#160;</a></span>serializer_impl()</h2>
+<a id="a39dd37ab72979d736f0332076aa8c154" name="a39dd37ab72979d736f0332076aa8c154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39dd37ab72979d736f0332076aa8c154">&#9670;&#160;</a></span>serializer_impl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +188,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr std::string <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html">ben::json::JSONSerializationInfo</a>&lt; T &gt;::serializer_impl </td>
+          <td class="memname">constexpr std::u8string <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html">ben::json::JSONSerializationInfo</a>&lt; T &gt;::serializer_impl </td>
           <td>(</td>
           <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
@@ -212,7 +210,7 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an empty string (constexpr) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00354">354</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00333">333</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -241,7 +239,7 @@ template&lt;typename T&gt; </div>
 
 <p>a constexpr boolean which is true if type T is JSON serializable and false otherwise </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00348">348</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00327">327</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -269,7 +267,7 @@ template&lt;typename T&gt; </div>
 
 <p>a constexpr function pointer to the <a class="el" href="#adf1b2cbddd05cbaabfa9615569b8abb4" title="an alias for a pointer to a function matching the type of the serialization implementation for this t...">SerializationFnType</a> for type T which points to the serialization implementation or nullptr if the type is not JSON serializable </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00358">358</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00337">337</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>

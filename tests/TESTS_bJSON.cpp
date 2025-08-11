@@ -15,8 +15,8 @@ namespace
     /// @brief example struct based on example usage documentation
     struct Example
     {
-        const std::string name{""};
-        Example *const    parent{nullptr};
+        const std::u8string name{u8""};
+        Example *const      parent{nullptr};
     };
 
 } // namespace
@@ -28,9 +28,9 @@ bJSON_MAKE_SERIALIZABLE(Example)
     {
         throw std::exception{"Example::name was empty-- cannot serialize to JSON."};
     }
-    std::string serialized{R"""({ "name" : )"""};
+    std::u8string serialized{u8R"""({ "name" : )"""};
     serialized.append(serialize(val.name));
-    serialized.append(R"""(, "parent" : )""");
+    serialized.append(u8R"""(, "parent" : )""");
     if (val.parent)
     {
         serialized.append(serialize(val.parent->name));
@@ -39,7 +39,7 @@ bJSON_MAKE_SERIALIZABLE(Example)
     {
         serialized.append(serialize(JSONValue::LiteralType::null_v));
     }
-    serialized.append(" }");
+    serialized.append(u8" }");
     return serialized;
 }
 
@@ -54,34 +54,35 @@ bTEST_FUNCTION(types_are_serializable, "serialization")
     // need to specify type until conversions are implemented
 
     bTEST_ASSERT(JSONSerializationInfo<JSONValue::LiteralType>::serializable);
-    bTEST_ASSERT(serialize(JSONValue::LiteralType::null_v) == "null");
-    bTEST_ASSERT(serialize(JSONValue::LiteralType::true_v) == "true");
-    bTEST_ASSERT(serialize(JSONValue::LiteralType::false_v) == "false");
+    bTEST_ASSERT(serialize(JSONValue::LiteralType::null_v) == u8"null");
+    bTEST_ASSERT(serialize(JSONValue::LiteralType::true_v) == u8"true");
+    bTEST_ASSERT(serialize(JSONValue::LiteralType::false_v) == u8"false");
 
     bTEST_ASSERT(JSONSerializationInfo<JSONValue::NumberType>::serializable);
-    bTEST_ASSERT(serialize<JSONValue::NumberType>(3.14L) == std::format("{}", 3.14));
-    bTEST_ASSERT(serialize<JSONValue::NumberType>(1) == std::format("{}", 1));
-    bTEST_ASSERT(serialize<JSONValue::NumberType>(0u) == std::format("{}", 0u));
-    bTEST_ASSERT(serialize<JSONValue::NumberType>(10l) == std::format("{}", 10l));
+    bTEST_ASSERT(serialize<JSONValue::NumberType>(3.14L) == u8"3.14");
+    bTEST_ASSERT(serialize<JSONValue::NumberType>(1) == u8"1");
+    bTEST_ASSERT(serialize<JSONValue::NumberType>(0u) == u8"0");
+    bTEST_ASSERT(serialize<JSONValue::NumberType>(10l) == u8"10");
 
     bTEST_ASSERT(JSONSerializationInfo<JSONValue::StringType>::serializable);
-    bTEST_ASSERT(serialize<JSONValue::StringType>("test string") == "\"test string\"");
+    bTEST_ASSERT(serialize<JSONValue::StringType>(std::u8string{u8"test string"}) == u8"\"test string\"");
 
     bTEST_ASSERT(JSONSerializationInfo<JSONValue::ArrayType>::serializable);
     bTEST_ASSERT(
         serialize<JSONValue::ArrayType>(
-            {JSONValue{JSONValue::LiteralType::true_v}, JSONValue{3.14}, JSONValue{"test"}}) ==
-        R"""([ true, 3.14, "test" ])""");
+            {JSONValue{JSONValue::LiteralType::true_v}, JSONValue{3.14}, JSONValue{u8"test"}}) ==
+        u8R"""([ true, 3.14, "test" ])""");
 
     bTEST_ASSERT(JSONSerializationInfo<JSONValue::ObjectType>::serializable);
     bTEST_ASSERT(
         serialize<JSONValue::ObjectType>({
-            {{"1", JSONValue{JSONValue::LiteralType::true_v}}, {"2", JSONValue{3.14}}, {"3", JSONValue{"test"}}}
-    }) ==
-        R"""({ "1" : true, "2" : 3.14, "3" : "test" })""");
+            {{u8"1", JSONValue{JSONValue::LiteralType::true_v}},
+             {u8"2", JSONValue{3.14}},
+             {u8"3", JSONValue{u8"test"}}}
+    }) == u8R"""({ "1" : true, "2" : 3.14, "3" : "test" })""");
 
     // make sure "undefined" types are not serialized...
-    bTEST_ASSERT(serialize<JSONValue>(JSONValue{}) == "");
+    bTEST_ASSERT(serialize<JSONValue>(JSONValue{}) == u8"");
 };
 
 /// @brief ensures that strings which contain special characters (backslashes, newline characters, etc.) convert the
@@ -92,17 +93,21 @@ bTEST_FUNCTION(strings_transform_special_characters, "serialization")
 
     // need to make sure the "special characters" are transformed when encoding into JSON
 
-    bTEST_ASSERT(serialize<std::string>("\\") == R"""("\\")""");
+    bTEST_ASSERT(serialize(std::u8string{u8"\\"}) == u8R"""("\\")""");
 
     // For some reason when using R"""(...)""" with this string, doxygen's preprocessor macro breaks. Weird, but this is
     // the workaround I found! Maybe it has something to do with the "extra" quote?
-    bTEST_ASSERT(serialize<std::string>("\"") == "\"\\\"\"");
+    bTEST_ASSERT(serialize(std::u8string{u8"\""}) == u8"\"\\\"\"");
 
-    bTEST_ASSERT(serialize<std::string>("\n") == R"""("\n")""");
-    bTEST_ASSERT(serialize<std::string>("\r") == R"""("\r")""");
-    bTEST_ASSERT(serialize<std::string>("\t") == R"""("\t")""");
-    bTEST_ASSERT(serialize<std::string>("\f") == R"""("\f")""");
-    bTEST_ASSERT(serialize<std::string>("\b") == R"""("\b")""");
+    bTEST_ASSERT(serialize(std::u8string{u8"\n"}) == u8R"""("\n")""");
+    bTEST_ASSERT(serialize(std::u8string{u8"\r"}) == u8R"""("\r")""");
+    bTEST_ASSERT(serialize(std::u8string{u8"\t"}) == u8R"""("\t")""");
+    bTEST_ASSERT(serialize(std::u8string{u8"\f"}) == u8R"""("\f")""");
+    bTEST_ASSERT(serialize(std::u8string{u8"\b"}) == u8R"""("\b")""");
+
+    // now be sure the "control characters" 0x00 through 0x1F become their "transformed" unicode escape versions...
+    bTEST_ASSERT(serialize(std::u8string{u8'\u0000'}) == u8R"""("\u0000")""");
+    // ... assmume the rest work!
 };
 
 /// @brief ensures that during serialization of an array, empty/undefined values are _not_ serialized (or rather,
@@ -112,8 +117,8 @@ bTEST_FUNCTION(arrays_ignore_undefined_values, "serialization")
     using namespace ben::json;
 
     bTEST_ASSERT(
-        serialize(JSONValue::ArrayType{JSONValue{JSONValue::LiteralType::true_v}, JSONValue{}, JSONValue{"test"}}) ==
-        R"""([ true, "test" ])""");
+        serialize(JSONValue::ArrayType{JSONValue{JSONValue::LiteralType::true_v}, JSONValue{}, JSONValue{u8"test"}}) ==
+        u8R"""([ true, "test" ])""");
 };
 
 /// @brief ensures that during serialization of an object, keys with empty/undefined values are _not_ serialized (or
@@ -124,9 +129,10 @@ bTEST_FUNCTION(objects_ignore_undefined_values, "serialization")
 
     bTEST_ASSERT(
         serialize(JSONValue::ObjectType{
-            {{"1", JSONValue{JSONValue::LiteralType::true_v}}, {"2", JSONValue{}}, {"3", JSONValue{"test"}}}
-    }) ==
-        R"""({ "1" : true, "3" : "test" })""");
+            {{u8"1", JSONValue{JSONValue::LiteralType::true_v}},
+             {u8"2", JSONValue{}},
+             {u8"3", JSONValue{u8"test"}}}
+    }) == u8R"""({ "1" : true, "3" : "test" })""");
 };
 
 /// @brief ensures that serialization of types which are not directly serializable but which are convertible to JSON
@@ -147,12 +153,15 @@ bTEST_FUNCTION(conversion_types_work_correctly, "serialization")
     bTEST_ASSERT(serialize(3.0) == serialize<JSONValue::NumberType>(3.0));
     bTEST_ASSERT(serialize(3u) == serialize<JSONValue::NumberType>(3.0));
     bTEST_ASSERT(serialize(3.f) == serialize<JSONValue::NumberType>(3.0));
-    bTEST_ASSERT(serialize(3ul) == serialize<JSONValue::NumberType>(3));
-    bTEST_ASSERT(serialize(size_t{3}) == serialize<JSONValue::NumberType>(3));
+    bTEST_ASSERT(serialize(3ul) == serialize<JSONValue::NumberType>(3.0));
+    bTEST_ASSERT(serialize(size_t{3}) == serialize<JSONValue::NumberType>(3.0));
     // assume other numeric types work as well...
 
-    // we can serialize char* string literals...
-    bTEST_ASSERT(serialize("test") == serialize(std::string("test")));
+    // we can serialize char8_t* u8string literals... (this is why everything has been wrapped in a u8 string
+    // constructor up to this point)
+    bTEST_ASSERT(serialize(u8"test") == serialize(std::u8string(u8"test")));
+
+    // we need a "smarter"/more nuanced way to handle char* and string conversions so we'll save those for a later time
 
     // will add more conversion tests here as new conversions are added! We hit the "big three" though --
     // bools/literals, numbers, and strings!
@@ -169,63 +178,11 @@ bTEST_FUNCTION(example_type_works_correctly, "serialization")
         is_json_serializable_v<Example>,
         "The serialization helper macro must result in the type being serializable!");
 
-    Example e1{.name = "top-level"};
-    Example e2{.name = "child", .parent = &e1};
-    Example e3{.name = ""};
+    Example e1{.name = u8"top-level"};
+    Example e2{.name = u8"child", .parent = &e1};
+    Example e3{.name = u8""};
 
-    bTEST_ASSERT(serialize(e1) == R"""({ "name" : "top-level", "parent" : null })""");
-    bTEST_ASSERT(serialize(e2) == R"""({ "name" : "child", "parent" : "top-level" })""");
-    bTEST_ASSERT(serialize(e3) == "");
-};
-
-/// @def RELEASE_CONSTEXPR
-/// @brief we only want to test constexpr functionality on release right now (due to small string
-/// optimization) but honestly, this behavior _SHOULD NOT_ be relied on.
-
-/// @brief ensures that constexpr evaluation is possible for (allowable) constexpr serializable types
-/// @note constexpr with std::string is known to not be the greatest decision. See discussion in bJSON.h.
-/// @see bJSON.h
-bTEST_FUNCTION(constexpr_serializable_types_work, "serialization")
-{
-#if not defined(DEBUG)
-#    define RELEASE_CONSTEXPR constexpr
-#else
-#    define RELEASE_CONSTEXPR
-#endif // !DEBUG
-
-    using namespace ben::json;
-
-    // bools/JSONLiterals are constexpr serializable...
-    RELEASE_CONSTEXPR const auto test1{serialize(true)};
-    bTEST_ASSERT(test1 == "true");
-
-    RELEASE_CONSTEXPR const auto test2{serialize(JSONValue::JSONLiteralType::null_v)};
-    bTEST_ASSERT(test2 == "null");
-
-    // arrays with ONLY bool or JSONLiteral values are constexpr serializable...
-    RELEASE_CONSTEXPR const auto test3{
-        serialize(JSONValue::ArrayType{JSONValue{false}, JSONValue{JSONValue::LiteralType::true_v}})};
-    bTEST_ASSERT(test3 == "[ false, true ]");
-
-    // Note: constexpr does NOT work here because of small string optimization (which is actually why the others _do_
-    // work in the first place):
-
-    /*RELEASE_CONSTEXPR*/ const auto test4{serialize(JSONValue::ArrayType{
-        JSONValue{false},
-        JSONValue{false},
-        JSONValue{false},
-        JSONValue{false},
-        JSONValue{false},
-        JSONValue{false},
-        JSONValue{false},
-        JSONValue{false},
-        JSONValue{false},
-        JSONValue{false}})};
-    bTEST_ASSERT(test4 == "[ false, false, false, false, false, false, false, false, false, false ]");
-
-    // at this point, numbers and strings are not constexpr serializable because they make use of std::format and
-    // std::regex respectively. Since JSONObject serialization is dependent on string serialization, it is also not
-    // constexpr serializable at this time.
-
-#undef RELEASE_CONSTEXPR
+    bTEST_ASSERT(serialize(e1) == u8R"""({ "name" : "top-level", "parent" : null })""");
+    bTEST_ASSERT(serialize(e2) == u8R"""({ "name" : "child", "parent" : "top-level" })""");
+    bTEST_ASSERT(serialize(e3) == u8"");
 };

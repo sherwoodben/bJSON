@@ -1,7 +1,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = bJSON
-PROJECT_NUMBER         = 0.1.0
-PROJECT_BRIEF          = "A \"single-file header\" JSON utility collection for C++."
+PROJECT_NUMBER         = 0.1.1
+PROJECT_BRIEF          = "A small JSON serialization library for C++."
 PROJECT_LOGO           =
 PROJECT_ICON           =
 OUTPUT_DIRECTORY       = ../docs/

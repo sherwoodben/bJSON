@@ -357,6 +357,13 @@ function set_project_defaults()
   architecture "x64"
   -- Default to C++20
   cppdialect "C++20"
+  -- Default to UTF-8 encoding
+  characterset "Unicode"
+  -- ...and add /utf-8 to the compiler
+  buildoptions
+  {
+    "/utf-8",
+  }
 
   -- staticruntime/runtime configurations
   staticruntime "on"

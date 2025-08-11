@@ -30,9 +30,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bJSON<span id="projectnumber">&#160;0.1.0</span>
+   <div id="projectname">bJSON<span id="projectnumber">&#160;0.1.1</span>
    </div>
-   <div id="projectbrief">A &quot;single-file header&quot; JSON utility collection for C++.</div>
+   <div id="projectbrief">A small JSON serialization library for C++.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -121,8 +121,8 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memitem:a0e82b9e6912118525778c8fb91ab06e2" id="r_a0e82b9e6912118525778c8fb91ab06e2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e82b9e6912118525778c8fb91ab06e2">LiteralType</a> = <a class="el" href="#a942858b40e176e608c19f2a890f4ef62">JSONLiteralType</a></td></tr>
 <tr class="memitem:ab3eb7c52f8ce4ec5a271aba4acf9713b" id="r_ab3eb7c52f8ce4ec5a271aba4acf9713b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b">NumberType</a> = long double</td></tr>
-<tr class="memitem:a80f162661a4ade91ade853a6677df7aa" id="r_a80f162661a4ade91ade853a6677df7aa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f162661a4ade91ade853a6677df7aa">ObjectType</a> = std::unordered_map&lt;std::string, <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a>&gt;</td></tr>
-<tr class="memitem:a8d7fdd7a7ea73591e7034ad1f730bcc1" id="r_a8d7fdd7a7ea73591e7034ad1f730bcc1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">StringType</a> = std::string</td></tr>
+<tr class="memitem:aa3407aeb8f4aebc5072d99caa4c365ee" id="r_aa3407aeb8f4aebc5072d99caa4c365ee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee">ObjectType</a> = std::unordered_map&lt;std::u8string, <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a>&gt;</td></tr>
+<tr class="memitem:ad125b872e7b6005debd8c7ae227be59f" id="r_ad125b872e7b6005debd8c7ae227be59f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad125b872e7b6005debd8c7ae227be59f">StringType</a> = std::u8string</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -131,15 +131,15 @@ constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>JSONValue</b> ()
 <tr class="memitem:adf02ce622290d24b8224804ce547d234" id="r_adf02ce622290d24b8224804ce547d234"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf02ce622290d24b8224804ce547d234">JSONValue</a> (<a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff">ArrayType</a> &amp;&amp;val) noexcept</td></tr>
 <tr class="memitem:a7a8eeee499b9edb3d376fa8153760bb0" id="r_a7a8eeee499b9edb3d376fa8153760bb0"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a8eeee499b9edb3d376fa8153760bb0">JSONValue</a> (bool val)</td></tr>
 <tr class="memitem:a2ff80566dbc8c3e2e9f7f4d1a7ba4f63" id="r_a2ff80566dbc8c3e2e9f7f4d1a7ba4f63"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ff80566dbc8c3e2e9f7f4d1a7ba4f63">JSONValue</a> (const <a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff">ArrayType</a> &amp;val)</td></tr>
-<tr class="memitem:a985027bcf10e68bf3b85970bec885f2b" id="r_a985027bcf10e68bf3b85970bec885f2b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a985027bcf10e68bf3b85970bec885f2b">JSONValue</a> (const char *const val)</td></tr>
+<tr class="memitem:a72a965b3bdc11306550d0287e88ca007" id="r_a72a965b3bdc11306550d0287e88ca007"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72a965b3bdc11306550d0287e88ca007">JSONValue</a> (const char8_t *const val)</td></tr>
 <tr class="memitem:abe37f5474a0a50558d793228cc35effe" id="r_abe37f5474a0a50558d793228cc35effe"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe37f5474a0a50558d793228cc35effe">JSONValue</a> (const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;other)</td></tr>
-<tr class="memitem:a072ddb40668d9153a4daf561bead93d9" id="r_a072ddb40668d9153a4daf561bead93d9"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a072ddb40668d9153a4daf561bead93d9">JSONValue</a> (const <a class="el" href="#a80f162661a4ade91ade853a6677df7aa">ObjectType</a> &amp;val)</td></tr>
-<tr class="memitem:a1564defb606818e42dfa837b2708d4f2" id="r_a1564defb606818e42dfa837b2708d4f2"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1564defb606818e42dfa837b2708d4f2">JSONValue</a> (const <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">StringType</a> &amp;val)</td></tr>
+<tr class="memitem:a072ddb40668d9153a4daf561bead93d9" id="r_a072ddb40668d9153a4daf561bead93d9"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a072ddb40668d9153a4daf561bead93d9">JSONValue</a> (const <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee">ObjectType</a> &amp;val)</td></tr>
+<tr class="memitem:a1564defb606818e42dfa837b2708d4f2" id="r_a1564defb606818e42dfa837b2708d4f2"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1564defb606818e42dfa837b2708d4f2">JSONValue</a> (const <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f">StringType</a> &amp;val)</td></tr>
 <tr class="memitem:a547a9ed3edfff27e60b6508bdc441e4c" id="r_a547a9ed3edfff27e60b6508bdc441e4c"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a547a9ed3edfff27e60b6508bdc441e4c">JSONValue</a> (<a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="memitem:aeef66f69995b0acea9549b1b71c52f8c" id="r_aeef66f69995b0acea9549b1b71c52f8c"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef66f69995b0acea9549b1b71c52f8c">JSONValue</a> (<a class="el" href="#a942858b40e176e608c19f2a890f4ef62">LiteralType</a> val)</td></tr>
 <tr class="memitem:a1409a54c9816f572deaac59b20aa2b6a" id="r_a1409a54c9816f572deaac59b20aa2b6a"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1409a54c9816f572deaac59b20aa2b6a">JSONValue</a> (<a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b">NumberType</a> val)</td></tr>
-<tr class="memitem:a5f0f6c8c4ca989f811009f932feba4c8" id="r_a5f0f6c8c4ca989f811009f932feba4c8"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f0f6c8c4ca989f811009f932feba4c8">JSONValue</a> (<a class="el" href="#a80f162661a4ade91ade853a6677df7aa">ObjectType</a> &amp;&amp;val) noexcept</td></tr>
-<tr class="memitem:a9da40c4f787f8f90ceec318948b3d7bb" id="r_a9da40c4f787f8f90ceec318948b3d7bb"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9da40c4f787f8f90ceec318948b3d7bb">JSONValue</a> (<a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">StringType</a> &amp;&amp;val) noexcept</td></tr>
+<tr class="memitem:a5f0f6c8c4ca989f811009f932feba4c8" id="r_a5f0f6c8c4ca989f811009f932feba4c8"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f0f6c8c4ca989f811009f932feba4c8">JSONValue</a> (<a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee">ObjectType</a> &amp;&amp;val) noexcept</td></tr>
+<tr class="memitem:a9da40c4f787f8f90ceec318948b3d7bb" id="r_a9da40c4f787f8f90ceec318948b3d7bb"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9da40c4f787f8f90ceec318948b3d7bb">JSONValue</a> (<a class="el" href="#ad125b872e7b6005debd8c7ae227be59f">StringType</a> &amp;&amp;val) noexcept</td></tr>
 <tr class="memitem:a48583015b119f2085df47e964829a1c5" id="r_a48583015b119f2085df47e964829a1c5"><td class="memTemplParams" colspan="2">template&lt;typename T, std::enable_if_t&lt; std::is_arithmetic_v&lt; T &gt;, bool &gt; enabled = true&gt; </td></tr>
 <tr class="memitem:a48583015b119f2085df47e964829a1c5 template"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48583015b119f2085df47e964829a1c5">JSONValue</a> (T val)</td></tr>
 <tr class="memitem:aa64e24190001646ec50644acb9ab6092" id="r_aa64e24190001646ec50644acb9ab6092"><td class="memItemLeft" align="right" valign="top"><a id="aa64e24190001646ec50644acb9ab6092" name="aa64e24190001646ec50644acb9ab6092"></a>
@@ -150,7 +150,7 @@ constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>~JSONValue</b> (
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aac2a8a8912ba1090faf5aa638408c715" id="r_aac2a8a8912ba1090faf5aa638408c715"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af5888712444712bf0284bc5747cc7f8f">JSONValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac2a8a8912ba1090faf5aa638408c715">type</a> {<a class="el" href="#af5888712444712bf0284bc5747cc7f8fa5e543256c480ac577d30f76f9120eb74">JSONValueType::undefined</a>}</td></tr>
-<tr class="memitem:aabaabccb2a72dd8525d1fdd4ca1a8ee7" id="r_aabaabccb2a72dd8525d1fdd4ca1a8ee7"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="#a942858b40e176e608c19f2a890f4ef62">LiteralType</a>, <a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b">NumberType</a>, <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">StringType</a>, <a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff">ArrayType</a>, <a class="el" href="#a80f162661a4ade91ade853a6677df7aa">ObjectType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabaabccb2a72dd8525d1fdd4ca1a8ee7">value</a> {<a class="el" href="#a942858b40e176e608c19f2a890f4ef62ad9d87e417c8060e39fd7ac0e0d243136">LiteralType::null_v</a>}</td></tr>
+<tr class="memitem:aabaabccb2a72dd8525d1fdd4ca1a8ee7" id="r_aabaabccb2a72dd8525d1fdd4ca1a8ee7"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="#a942858b40e176e608c19f2a890f4ef62">LiteralType</a>, <a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b">NumberType</a>, <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f">StringType</a>, <a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff">ArrayType</a>, <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee">ObjectType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabaabccb2a72dd8525d1fdd4ca1a8ee7">value</a> {<a class="el" href="#a942858b40e176e608c19f2a890f4ef62ad9d87e417c8060e39fd7ac0e0d243136">LiteralType::null_v</a>}</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>a struct containing the information associated with a JSON "value" </p>
@@ -158,14 +158,14 @@ Public Attributes</h2></td></tr>
 <p>contains type definitions/aliases for the internally stored values (all of which will be provided serialization implementations):</p><ul>
 <li><a class="el" href="#a0e82b9e6912118525778c8fb91ab06e2" title="the LiteralType for JSONValues">LiteralType</a></li>
 <li><a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b" title="the NumberType for JSONValues">NumberType</a></li>
-<li><a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1" title="the StringType for JSONValues">StringType</a></li>
+<li><a class="el" href="#ad125b872e7b6005debd8c7ae227be59f" title="the StringType for JSONValues">StringType</a></li>
 <li><a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff" title="the ArrayType for JSONValues">ArrayType</a></li>
-<li><a class="el" href="#a80f162661a4ade91ade853a6677df7aa" title="the ObjectType for JSONValues">ObjectType</a></li>
+<li><a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee" title="the ObjectType for JSONValues">ObjectType</a></li>
 </ul>
 <p>defines an enum <a class="el" href="#af5888712444712bf0284bc5747cc7f8f" title="enum corresponding to the five possible/expected states of the variant value&#39;s current type (plus an ...">JSONValueType</a> which can be {undefined, literal, number, string, array, object} which is used to help interpret the variant value. Also, default construction/empty initialization of a <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> sets the stored <a class="el" href="#af5888712444712bf0284bc5747cc7f8f" title="enum corresponding to the five possible/expected states of the variant value&#39;s current type (plus an ...">JSONValueType</a> value to 'undefined', and JSONValues with <a class="el" href="#af5888712444712bf0284bc5747cc7f8f" title="enum corresponding to the five possible/expected states of the variant value&#39;s current type (plus an ...">JSONValueType</a> values of 'undefined' are not serialized!</p>
 <p>implements the capability to "hold" one of the above types as the "value" member (achieved through the use of std::variant&lt;LiteralType, NumberType, ...&gt;) </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00141">141</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00122">122</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="aabd3b5ba8f512a53f1540fc9df88ddff" name="aabd3b5ba8f512a53f1540fc9df88ddff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabd3b5ba8f512a53f1540fc9df88ddff">&#9670;&#160;</a></span>ArrayType</h2>
@@ -182,7 +182,7 @@ Public Attributes</h2></td></tr>
 <p>the <a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff" title="the ArrayType for JSONValues">ArrayType</a> for JSONValues </p>
 <p>std::vector&lt;T&gt; stores values of type T such that the elements are accessible via index just like JSON arrays, so <a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff" title="the ArrayType for JSONValues">ArrayType</a> will be stored as a std::vector&lt;JSONValue&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00176">176</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00157">157</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -201,7 +201,7 @@ Public Attributes</h2></td></tr>
 <p>the <a class="el" href="#a0e82b9e6912118525778c8fb91ab06e2" title="the LiteralType for JSONValues">LiteralType</a> for JSONValues </p>
 <p>the <a class="el" href="#a942858b40e176e608c19f2a890f4ef62" title="enum corresponding to the three possible JSON literal values">JSONLiteralType</a> enum encapsulates the three possible JSON literal values, so <a class="el" href="#a0e82b9e6912118525778c8fb91ab06e2" title="the LiteralType for JSONValues">LiteralType</a> values will be stored as a <a class="el" href="#a942858b40e176e608c19f2a890f4ef62" title="enum corresponding to the three possible JSON literal values">JSONLiteralType</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00157">157</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00138">138</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -220,45 +220,45 @@ Public Attributes</h2></td></tr>
 <p>the <a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b" title="the NumberType for JSONValues">NumberType</a> for JSONValues </p>
 <p>long doubles can store any value from std::numeric_limits&lt;long double&gt;::lowest() to std::numeric_limits&lt;long double&gt;::max()... that should be enough precision for just about any application, so <a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b" title="the NumberType for JSONValues">NumberType</a> values will be stored as long doubles </p>
 
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00145">145</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+
+</div>
+</div>
+<a id="aa3407aeb8f4aebc5072d99caa4c365ee" name="aa3407aeb8f4aebc5072d99caa4c365ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3407aeb8f4aebc5072d99caa4c365ee">&#9670;&#160;</a></span>ObjectType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee">ben::json::JSONValue::ObjectType</a> = std::unordered_map&lt;std::u8string, <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee" title="the ObjectType for JSONValues">ObjectType</a> for JSONValues </p>
+<p>std::unordered_map&lt;std::u8string, T&gt; stores values of type T such that the values are accessible via keys of type std::u8string just like a JSON object, so <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee" title="the ObjectType for JSONValues">ObjectType</a> will be stored as a std::unordered_map&lt;std::u8string, JSONValue&gt; </p>
+
 <p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00164">164</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
-<a id="a80f162661a4ade91ade853a6677df7aa" name="a80f162661a4ade91ade853a6677df7aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80f162661a4ade91ade853a6677df7aa">&#9670;&#160;</a></span>ObjectType</h2>
+<a id="ad125b872e7b6005debd8c7ae227be59f" name="ad125b872e7b6005debd8c7ae227be59f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad125b872e7b6005debd8c7ae227be59f">&#9670;&#160;</a></span>StringType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a80f162661a4ade91ade853a6677df7aa">ben::json::JSONValue::ObjectType</a> = std::unordered_map&lt;std::string, <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a>&gt;</td>
+          <td class="memname">using <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f">ben::json::JSONValue::StringType</a> = std::u8string</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>the <a class="el" href="#a80f162661a4ade91ade853a6677df7aa" title="the ObjectType for JSONValues">ObjectType</a> for JSONValues </p>
-<p>std::unordered_map&lt;std::string, T&gt; stores values of type T such that the values are accessible via keys type std::string just like a JSON object, so <a class="el" href="#a80f162661a4ade91ade853a6677df7aa" title="the ObjectType for JSONValues">ObjectType</a> will be stored as a std::unordered_map&lt;std::string, JSONValue&gt; </p>
+<p>the <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f" title="the StringType for JSONValues">StringType</a> for JSONValues </p>
+<p>std::u8strings enforce UTF-8 encoding which is required by the JSON specification for data which might be transmitted between systems, so <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f" title="the StringType for JSONValues">StringType</a> values will be stored as std::u8strings </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00183">183</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
-
-</div>
-</div>
-<a id="a8d7fdd7a7ea73591e7034ad1f730bcc1" name="a8d7fdd7a7ea73591e7034ad1f730bcc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">&#9670;&#160;</a></span>StringType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">ben::json::JSONValue::StringType</a> = std::string</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>the <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1" title="the StringType for JSONValues">StringType</a> for JSONValues </p>
-<p>std::strings can store all unicode characters (depending on encoding, etc. but that shouldn't be an issue at all), so <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1" title="the StringType for JSONValues">StringType</a> values will be stored as std::strings </p>
-
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00170">170</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00151">151</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -293,7 +293,7 @@ Public Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00146">146</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00127">127</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -325,15 +325,15 @@ Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="af5888712444712bf0284bc5747cc7f8fab1bc248a7ff2b2e95569f56de68615df" name="af5888712444712bf0284bc5747cc7f8fab1bc248a7ff2b2e95569f56de68615df"></a>number&#160;</td><td class="fielddoc"><p>corresponds to a <a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b" title="the NumberType for JSONValues">NumberType</a> stored as the value for this <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="af5888712444712bf0284bc5747cc7f8fab45cffe084dd3d20d928bee85e7b0f21" name="af5888712444712bf0284bc5747cc7f8fab45cffe084dd3d20d928bee85e7b0f21"></a>string&#160;</td><td class="fielddoc"><p>corresponds to a <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1" title="the StringType for JSONValues">StringType</a> stored as the value for this <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </p>
+<tr><td class="fieldname"><a id="af5888712444712bf0284bc5747cc7f8fab45cffe084dd3d20d928bee85e7b0f21" name="af5888712444712bf0284bc5747cc7f8fab45cffe084dd3d20d928bee85e7b0f21"></a>string&#160;</td><td class="fielddoc"><p>corresponds to a <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f" title="the StringType for JSONValues">StringType</a> stored as the value for this <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </p>
 </td></tr>
 <tr><td class="fieldname"><a id="af5888712444712bf0284bc5747cc7f8faf1f713c9e000f5d3f280adbd124df4f5" name="af5888712444712bf0284bc5747cc7f8faf1f713c9e000f5d3f280adbd124df4f5"></a>array&#160;</td><td class="fielddoc"><p>corresponds to a <a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff" title="the ArrayType for JSONValues">ArrayType</a> stored as the value for this <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="af5888712444712bf0284bc5747cc7f8faa8cfde6331bd59eb2ac96f8911c4b666" name="af5888712444712bf0284bc5747cc7f8faa8cfde6331bd59eb2ac96f8911c4b666"></a>object&#160;</td><td class="fielddoc"><p>corresponds to a <a class="el" href="#a80f162661a4ade91ade853a6677df7aa" title="the ObjectType for JSONValues">ObjectType</a> stored as the value for this <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </p>
+<tr><td class="fieldname"><a id="af5888712444712bf0284bc5747cc7f8faa8cfde6331bd59eb2ac96f8911c4b666" name="af5888712444712bf0284bc5747cc7f8faa8cfde6331bd59eb2ac96f8911c4b666"></a>object&#160;</td><td class="fielddoc"><p>corresponds to a <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee" title="the ObjectType for JSONValues">ObjectType</a> stored as the value for this <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </p>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00187">187</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00168">168</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +369,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00221">221</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00205">205</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -404,7 +404,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00227">227</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00211">211</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -449,7 +449,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00231">231</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00215">215</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -493,7 +493,7 @@ template&lt;typename T, std::enable_if_t&lt; std::is_arithmetic_v&lt; T &gt;, bo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00239">239</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00223">223</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -519,7 +519,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">ben::json::JSONValue::JSONValue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">StringType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f">StringType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -530,16 +530,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>const <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1" title="the StringType for JSONValues">JSONValue::StringType</a>&amp; ctor </p>
+<p>const <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f" title="the StringType for JSONValues">JSONValue::StringType</a>&amp; ctor </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">val</td><td>the <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1" title="the StringType for JSONValues">JSONValue::StringType</a> value to store in the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>'s variant </td></tr>
+    <tr><td class="paramname">val</td><td>the <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f" title="the StringType for JSONValues">JSONValue::StringType</a> value to store in the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>'s variant </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>copies val into the stored value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00244">244</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00228">228</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -555,7 +555,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">ben::json::JSONValue::JSONValue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">StringType</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#ad125b872e7b6005debd8c7ae227be59f">StringType</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -566,21 +566,21 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1" title="the StringType for JSONValues">JSONValue::StringType</a>&amp;&amp; ctor. </p>
+<p><a class="el" href="#ad125b872e7b6005debd8c7ae227be59f" title="the StringType for JSONValues">JSONValue::StringType</a>&amp;&amp; ctor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">val</td><td>the <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1" title="the StringType for JSONValues">JSONValue::StringType</a> value to store in the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>'s variant </td></tr>
+    <tr><td class="paramname">val</td><td>the <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f" title="the StringType for JSONValues">JSONValue::StringType</a> value to store in the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>'s variant </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>moves val into the stored value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00249">249</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00233">233</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
-<a id="a985027bcf10e68bf3b85970bec885f2b" name="a985027bcf10e68bf3b85970bec885f2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a985027bcf10e68bf3b85970bec885f2b">&#9670;&#160;</a></span>JSONValue() <span class="overload">[7/13]</span></h2>
+<a id="a72a965b3bdc11306550d0287e88ca007" name="a72a965b3bdc11306550d0287e88ca007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a965b3bdc11306550d0287e88ca007">&#9670;&#160;</a></span>JSONValue() <span class="overload">[7/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -591,7 +591,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">ben::json::JSONValue::JSONValue </td>
           <td>(</td>
-          <td class="paramtype">const char *const</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype">const char8_t *const</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -602,21 +602,21 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>char* string literal ctor </p>
+<p>char8_t* string literal ctor </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">val</td><td>the char* string literal to convert to a string (if the char* is nullptr, converts to an empty string) </td></tr>
+    <tr><td class="paramname">val</td><td>the char8_t* string literal to convert to a u8string (if the char8_t* is nullptr, converts to an empty u8string) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00254">254</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00238">238</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structben_1_1json_1_1_j_s_o_n_value_a985027bcf10e68bf3b85970bec885f2b_cgraph.png" border="0" usemap="#astructben_1_1json_1_1_j_s_o_n_value_a985027bcf10e68bf3b85970bec885f2b_cgraph" loading="lazy" alt=""/></div>
-<map name="astructben_1_1json_1_1_j_s_o_n_value_a985027bcf10e68bf3b85970bec885f2b_cgraph" id="astructben_1_1json_1_1_j_s_o_n_value_a985027bcf10e68bf3b85970bec885f2b_cgraph">
-<area shape="rect" title="char* string literal ctor" alt="" coords="5,5,156,48"/>
+<div class="center"><img src="structben_1_1json_1_1_j_s_o_n_value_a72a965b3bdc11306550d0287e88ca007_cgraph.png" border="0" usemap="#astructben_1_1json_1_1_j_s_o_n_value_a72a965b3bdc11306550d0287e88ca007_cgraph" loading="lazy" alt=""/></div>
+<map name="astructben_1_1json_1_1_j_s_o_n_value_a72a965b3bdc11306550d0287e88ca007_cgraph" id="astructben_1_1json_1_1_j_s_o_n_value_a72a965b3bdc11306550d0287e88ca007_cgraph">
+<area shape="rect" title="char8_t* string literal ctor" alt="" coords="5,5,156,48"/>
 <area shape="rect" href="structben_1_1json_1_1_j_s_o_n_value.html#a4d4531b1c20688fa1f24668bcdaa5279" title="leaves the JSONValue in such a state that .type == JSONValueType::undefined (i.e. it will be skipped ..." alt="" coords="204,5,354,48"/>
 <area shape="poly" title=" " alt="" coords="156,24,188,24,188,29,156,29"/>
 </map>
@@ -656,7 +656,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>copies val into the stored value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00259">259</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00243">243</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -692,7 +692,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>moves val into the stored value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00264">264</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00248">248</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -708,7 +708,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">ben::json::JSONValue::JSONValue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a80f162661a4ade91ade853a6677df7aa">ObjectType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee">ObjectType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -719,16 +719,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>const <a class="el" href="#a80f162661a4ade91ade853a6677df7aa" title="the ObjectType for JSONValues">JSONValue::ObjectType</a>&amp; ctor </p>
+<p>const <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee" title="the ObjectType for JSONValues">JSONValue::ObjectType</a>&amp; ctor </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">val</td><td>the <a class="el" href="#a80f162661a4ade91ade853a6677df7aa" title="the ObjectType for JSONValues">JSONValue::ObjectType</a> value to store in the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>'s variant </td></tr>
+    <tr><td class="paramname">val</td><td>the <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee" title="the ObjectType for JSONValues">JSONValue::ObjectType</a> value to store in the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>'s variant </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>copies val into the stored value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00271">271</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00253">253</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -744,7 +744,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">ben::json::JSONValue::JSONValue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a80f162661a4ade91ade853a6677df7aa">ObjectType</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee">ObjectType</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -755,16 +755,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="#a80f162661a4ade91ade853a6677df7aa" title="the ObjectType for JSONValues">JSONValue::ObjectType</a>&amp;&amp; ctor. </p>
+<p><a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee" title="the ObjectType for JSONValues">JSONValue::ObjectType</a>&amp;&amp; ctor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">val</td><td>the <a class="el" href="#a80f162661a4ade91ade853a6677df7aa" title="the ObjectType for JSONValues">JSONValue::ObjectType</a> value to store in the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>'s variant </td></tr>
+    <tr><td class="paramname">val</td><td>the <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee" title="the ObjectType for JSONValues">JSONValue::ObjectType</a> value to store in the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>'s variant </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>moves val into the stored value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00276">276</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00258">258</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -799,7 +799,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00280">280</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00262">262</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -845,7 +845,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>sets other.type to <a class="el" href="#af5888712444712bf0284bc5747cc7f8fa5e543256c480ac577d30f76f9120eb74">JSONValueType::undefined</a>, leaves other.value in a moved-from (likely invalid) state </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00286">286</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00268">268</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -892,7 +892,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a reference to this <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00296">296</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00278">278</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -939,7 +939,7 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>a reference to this <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>sets other.type to <a class="el" href="#af5888712444712bf0284bc5747cc7f8fa5e543256c480ac577d30f76f9120eb74">JSONValueType::undefined</a>, leaves other.value in a moved-from (likely invalid) state </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00309">309</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00291">291</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -966,9 +966,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>"track" the current state of the value in the variant defined below </p>
+<p>"track" the current state of the value in the variant defined below. </p>
+<p>Since we're using std::variant we don't actually need this! That being said this seems slightly easier to wrap my head around, even if it isn't as efficient as it possibly could be </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00201">201</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00185">185</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -979,14 +980,14 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::variant&lt;<a class="el" href="#a942858b40e176e608c19f2a890f4ef62">LiteralType</a>, <a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b">NumberType</a>, <a class="el" href="#a8d7fdd7a7ea73591e7034ad1f730bcc1">StringType</a>, <a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff">ArrayType</a>, <a class="el" href="#a80f162661a4ade91ade853a6677df7aa">ObjectType</a>&gt; ben::json::JSONValue::value {<a class="el" href="#a942858b40e176e608c19f2a890f4ef62ad9d87e417c8060e39fd7ac0e0d243136">LiteralType::null_v</a>}</td>
+          <td class="memname">std::variant&lt;<a class="el" href="#a942858b40e176e608c19f2a890f4ef62">LiteralType</a>, <a class="el" href="#ab3eb7c52f8ce4ec5a271aba4acf9713b">NumberType</a>, <a class="el" href="#ad125b872e7b6005debd8c7ae227be59f">StringType</a>, <a class="el" href="#aabd3b5ba8f512a53f1540fc9df88ddff">ArrayType</a>, <a class="el" href="#aa3407aeb8f4aebc5072d99caa4c365ee">ObjectType</a>&gt; ben::json::JSONValue::value {<a class="el" href="#a942858b40e176e608c19f2a890f4ef62ad9d87e417c8060e39fd7ac0e0d243136">LiteralType::null_v</a>}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>the actual value the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> holds; a variant of one of the five possible types JSONValues can implement </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00205">205</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00189">189</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
