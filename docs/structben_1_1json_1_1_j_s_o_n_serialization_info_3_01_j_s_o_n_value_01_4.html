@@ -30,9 +30,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bJSON<span id="projectnumber">&#160;0.1.0</span>
+   <div id="projectname">bJSON<span id="projectnumber">&#160;0.1.1</span>
    </div>
-   <div id="projectbrief">A &quot;single-file header&quot; JSON utility collection for C++.</div>
+   <div id="projectbrief">A small JSON serialization library for C++.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -124,43 +124,43 @@ Collaboration diagram for ben::json::JSONSerializationInfo&lt; JSONValue &gt;:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a704f1d0ae20c930d24f06901ccae7989" id="r_a704f1d0ae20c930d24f06901ccae7989"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a704f1d0ae20c930d24f06901ccae7989">SerializationFnType</a> = const std::string (*)(const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;)</td></tr>
+<tr class="memitem:a58e2d7b3608f3931ec3fa3bf77e2ad44" id="r_a58e2d7b3608f3931ec3fa3bf77e2ad44"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58e2d7b3608f3931ec3fa3bf77e2ad44">SerializationFnType</a> = const std::u8string (*)(const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad2c3ba8e8fa12c235055c123dcbd7869" id="r_ad2c3ba8e8fa12c235055c123dcbd7869"><td class="memItemLeft" align="right" valign="top">static constexpr const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2c3ba8e8fa12c235055c123dcbd7869">serializer_impl</a> (const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;)</td></tr>
+<tr class="memitem:a3247893e4bd2ddf7248b31c1ce92ba51" id="r_a3247893e4bd2ddf7248b31c1ce92ba51"><td class="memItemLeft" align="right" valign="top">static const std::u8string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3247893e4bd2ddf7248b31c1ce92ba51">serializer_impl</a> (const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a4f93404db6d58bc357db87eaec7fe7ab" id="r_a4f93404db6d58bc357db87eaec7fe7ab"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f93404db6d58bc357db87eaec7fe7ab">serializable</a> {true}</td></tr>
-<tr class="memitem:ad9d4649ca7faf95f1fb2909ccecf00fd" id="r_ad9d4649ca7faf95f1fb2909ccecf00fd"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#a704f1d0ae20c930d24f06901ccae7989">SerializationFnType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9d4649ca7faf95f1fb2909ccecf00fd">serializer</a> {&amp;<a class="el" href="#ad2c3ba8e8fa12c235055c123dcbd7869">serializer_impl</a>}</td></tr>
+<tr class="memitem:ad9d4649ca7faf95f1fb2909ccecf00fd" id="r_ad9d4649ca7faf95f1fb2909ccecf00fd"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#a58e2d7b3608f3931ec3fa3bf77e2ad44">SerializationFnType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9d4649ca7faf95f1fb2909ccecf00fd">serializer</a> {&amp;<a class="el" href="#a3247893e4bd2ddf7248b31c1ce92ba51">serializer_impl</a>}</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>specialization for <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> typed <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html" title="templated struct which contains information associated with the JSON serialization of a type">JSONSerializationInfo</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00428">428</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00403">403</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a704f1d0ae20c930d24f06901ccae7989" name="a704f1d0ae20c930d24f06901ccae7989"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a704f1d0ae20c930d24f06901ccae7989">&#9670;&#160;</a></span>SerializationFnType</h2>
+<a id="a58e2d7b3608f3931ec3fa3bf77e2ad44" name="a58e2d7b3608f3931ec3fa3bf77e2ad44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e2d7b3608f3931ec3fa3bf77e2ad44">&#9670;&#160;</a></span>SerializationFnType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html">ben::json::JSONSerializationInfo</a>&lt; <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &gt;::SerializationFnType = const std::string (*)(const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;)</td>
+          <td class="memname">using <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html">ben::json::JSONSerializationInfo</a>&lt; <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &gt;::SerializationFnType = const std::u8string (*)(const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>an alias for a pointer to a function accepting a const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>&amp; as the single argument which returns a const std::string </p>
+<p>an alias for a pointer to a function accepting a const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a>&amp; as the single argument which returns a const std::u8string </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00428">428</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00403">403</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ad2c3ba8e8fa12c235055c123dcbd7869" name="ad2c3ba8e8fa12c235055c123dcbd7869"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2c3ba8e8fa12c235055c123dcbd7869">&#9670;&#160;</a></span>serializer_impl()</h2>
+<a id="a3247893e4bd2ddf7248b31c1ce92ba51" name="a3247893e4bd2ddf7248b31c1ce92ba51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3247893e4bd2ddf7248b31c1ce92ba51">&#9670;&#160;</a></span>serializer_impl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +169,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html">ben::json::JSONSerializationInfo</a>&lt; <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &gt;::serializer_impl </td>
+          <td class="memname">const std::u8string <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html">ben::json::JSONSerializationInfo</a>&lt; <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &gt;::serializer_impl </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
@@ -177,7 +177,7 @@ Static Public Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -189,9 +189,9 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a const std::string containing the serialized <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a const std::u8string containing the serialized <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00530">530</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00573">573</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -218,7 +218,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>a constexpr boolean which is true for JSONValues </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00428">428</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00403">403</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a704f1d0ae20c930d24f06901ccae7989">SerializationFnType</a> <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html">ben::json::JSONSerializationInfo</a>&lt; <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &gt;::serializer {&amp;<a class="el" href="#ad2c3ba8e8fa12c235055c123dcbd7869">serializer_impl</a>}</td>
+          <td class="memname"><a class="el" href="#a58e2d7b3608f3931ec3fa3bf77e2ad44">SerializationFnType</a> <a class="el" href="structben_1_1json_1_1_j_s_o_n_serialization_info.html">ben::json::JSONSerializationInfo</a>&lt; <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html">JSONValue</a> &gt;::serializer {&amp;<a class="el" href="#a3247893e4bd2ddf7248b31c1ce92ba51">serializer_impl</a>}</td>
         </tr>
       </table>
   </td>
@@ -244,7 +244,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>the serializer function pointer points to the serializer_impl for the <a class="el" href="structben_1_1json_1_1_j_s_o_n_value.html" title="a struct containing the information associated with a JSON &quot;value&quot;">JSONValue</a> type </p>
 
-<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00428">428</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="b_j_s_o_n_8h_source.html#l00403">403</a> of file <a class="el" href="b_j_s_o_n_8h_source.html">bJSON.h</a>.</p>
 
 </div>
 </div>
